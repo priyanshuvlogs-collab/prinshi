@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <rect width="800" height="1000" fill="#e9e4d8"/>
+  <path d="M250 180 L330 150 Q400 200 470 150 L550 180 L640 260 L580 320 L560 290 L560 860 L240 860 L240 290 L220 320 L160 260 Z" fill="#0e0e0e" stroke="#0e0e0e" stroke-width="6"/>
+  <rect x="300" y="420" width="200" height="200" fill="#d9481c"/>
+  <text x="400" y="950" font-family="system-ui, sans-serif" font-size="28" text-anchor="middle" fill="#0e0e0e" opacity="0.7">MOCKUP</text>
+</svg>

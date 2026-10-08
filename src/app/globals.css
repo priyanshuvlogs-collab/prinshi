@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #f4f1ea;
+  --fg: #0e0e0e;
+  --muted: #5a5853;
+  --line: #d9d4c7;
+  --card: #ffffff;
+  /* ACCENT: take this from the winning drop artwork. Placeholder is a safe orange-red. */
+  --accent: #d9481c;
+  --accent-fg: #ffffff;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-card: var(--card);
+  --color-accent: var(--accent);
+  --color-accent-fg: var(--accent-fg);
+  --font-heading: var(--font-heading);
+  --font-sans: var(--font-body);
+}
+
+html {
+  background: var(--bg);
+  color: var(--fg);
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, .font-heading {
+  font-family: var(--font-heading), system-ui, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-none px-5 py-3 text-base font-bold uppercase tracking-wide transition-colors;
+  min-height: 48px;
+}
+.btn-primary { @apply bg-fg text-bg hover:bg-accent hover:text-accent-fg; }
+.btn-secondary { @apply border-2 border-fg bg-transparent text-fg hover:bg-fg hover:text-bg; }
+.btn[disabled], .btn[aria-disabled="true"] { @apply cursor-not-allowed opacity-50 hover:bg-fg hover:text-bg; }
+
+.input {
+  @apply w-full border-2 border-line bg-card px-3 py-3 text-base text-fg;
+  min-height: 48px;
+}
+.input:focus { @apply border-fg outline-none; }
+.label { @apply mb-1 block text-sm font-bold uppercase tracking-wide; }
+.error { @apply mt-1 text-sm font-semibold text-accent; }
+.container-x { @apply mx-auto w-full max-w-6xl px-4 sm:px-6; }
